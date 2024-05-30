@@ -1,0 +1,29 @@
+@import '../../styles/styles.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 40px;
+  background-image: $gradient-color;
+  border-radius: 0px 0px 30px 30px;
+  max-height: 122px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  color: $dark;
+  align-self: center;
+}
+
+.subtitle {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: $dark;
+}
