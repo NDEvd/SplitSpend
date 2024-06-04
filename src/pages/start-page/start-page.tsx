@@ -1,20 +1,14 @@
 import { FC } from 'react';
-// import style from './start-page.module.scss';
-// import { HeaderEvent } from '../../components/header-event/header-event';
-import { Footer } from '../../components/footer/footer';
-import { HeaderStart } from '../../components/header-start/header-start';
+import style from './start-page.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 export const StartPage: FC = () => {
+  const navigate = useNavigate();
 
   return (
     <>
-      {/* <HeaderEvent
-        event='Поездка в Мадрид'
-        datesEvent='01.06.24 - 25.06.24'
-      /> */}
-      <HeaderStart />
+      <button className={style.button} onClick={() => navigate('/addEvent')}></button>
       
-      <Footer />
     </>
 
   );
