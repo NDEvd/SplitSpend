@@ -16,11 +16,11 @@ export const EventItem: FC<EventItemProps> = ({
   dateTo,
   onClick,
 }) => (
-    <li className={styles.item} onClick={onClick}>
+    <div className={styles.item} onClick={onClick}>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.dateItem}>
         <h2 className={styles.date}>{dateFrom} </h2>
         {dateTo && <h2 className={styles.date}> - {dateTo}</h2>}
       </div>
-    </li>
+    </div>
   );

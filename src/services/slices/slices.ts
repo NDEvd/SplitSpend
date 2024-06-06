@@ -1,33 +1,28 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type {PayloadAction} from "@reduxjs/toolkit";
-import { TEvent, TEventNew, TEventOnly } from '../../utils/types';
-import { mockEvent, mockEventOnly } from '../../utils/const';
+import { TEvent, TFriend, TExpense } from '../../utils/types';
+import { mockEventOnly, mockFriendsOnly, mockExpensesOnly } from '../../utils/const';
 import { v4 as uuidv4 } from 'uuid';
 
 interface EventState {
   events: TEvent[];
-  eventsOnly: TEventOnly[];
+  friends: TFriend[];
+  expenses: TExpense[];
 }
 
 const initialState: EventState = {
-  events: [mockEvent],
-  eventsOnly: mockEventOnly,
+  events: mockEventOnly,
+  friends: mockFriendsOnly,
+  expenses: mockExpensesOnly,
 };
 
 export const eventsSlice = createSlice({
   name: 'events',
   initialState,
   reducers: {
-    addEventOnly: {
-      reducer: (state, action: PayloadAction<TEventOnly>) => {
-        state.eventsOnly.push(action.payload);
-      },
-      prepare: (eventUnic) => ({
-        payload: { ...eventUnic, id: uuidv4() }
-      })
-    },
+
     addEvent: {
-      reducer: (state, action: PayloadAction<TEventNew>) => {
+      reducer: (state, action: PayloadAction<TEvent>) => {
         state.events.push(action.payload);
       },
       prepare: (eventUnic) => ({
@@ -54,4 +49,4 @@ export const eventsSlice = createSlice({
 });
 
 export default eventsSlice.reducer;
-export const { addEventOnly, addEvent } = eventsSlice.actions;
+export const { addEvent } = eventsSlice.actions;
