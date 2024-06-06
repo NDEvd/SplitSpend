@@ -1,0 +1,40 @@
+@import '../../styles/styles.scss';
+
+.item {
+  @include basic-item;
+  min-height: 60px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.6s;
+}
+
+.item :hover {
+  background-color: rgba(143, 211, 244, 0.5);
+}
+
+.title {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dateItem {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+}
+
+.date {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+}
