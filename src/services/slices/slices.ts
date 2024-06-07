@@ -29,18 +29,6 @@ export const eventsSlice = createSlice({
         payload: { ...eventUnic, id: uuidv4() }
       })
     },
-    // setServices: (state, action: PayloadAction<TServices[]>) => {
-    //   state.services = action.payload;
-    // },
-    // setSubscriptions: (state, action: PayloadAction<TSubscriptions[]>) => {
-    //   state.subscriptions = action.payload;
-    // },
-    // resetPromocode: (state) => {
-    //   state.promocode = {
-    //     code: '',
-    //     date: '',
-    //   };
-    // },
   },
   selectors: {},
   // extraReducers: (builder) => {
