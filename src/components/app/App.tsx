@@ -13,20 +13,19 @@ import { Header } from '../header/header';
 
 
 function App() {
-  const [isActiveTab, setIsActiveTab] = useState<string>('tab-home');
+  const location = useLocation();
+
+  const [isActiveTab, setIsActiveTab] = useState<string>(location.pathname);
   const handlClickTab = (tabId: string) => {
     setIsActiveTab(tabId);
     console.log(location.pathname);
   }
 
-  const location = useLocation();
+  
 
   return (
     <>
-      <Header homePage={(location.pathname === '/' || location.pathname === '/addEvent') ? true : false}
-        event='Поездка в Мадрид'
-        datesEvent='01.06.24 - 25.06.24'
-      />
+      <Header homePage={(location.pathname === '/' || location.pathname === '/addEvent') ? true : false} />
       <Routes>
         <Route path='/' element={<StartPage />} />
         <Route path='/addEvent' element={<AddEventPage />} />
@@ -36,7 +35,7 @@ function App() {
         <Route path='/results' element={<ResultsPage />} />
       </Routes>
       <Footer
-        notEmpty={location.pathname === '/' ? false : true}
+        notEmpty={(location.pathname === '/' || location.pathname === '/addEvent') ? false : true}
         isActiveTab={isActiveTab}
         handlClickTab={handlClickTab} />
     </>
