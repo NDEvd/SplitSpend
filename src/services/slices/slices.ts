@@ -8,12 +8,19 @@ interface EventState {
   events: TEvent[];
   friends: TFriend[];
   expenses: TExpense[];
+  selectedEvent: TEvent;
 }
 
 const initialState: EventState = {
   events: mockEventOnly,
   friends: mockFriendsOnly,
   expenses: mockExpensesOnly,
+  selectedEvent: {
+    id: '',
+    title: '',
+    dateFrom: '',
+    dateTo: '',
+  },
 };
 
 export const eventsSlice = createSlice({
@@ -24,6 +31,7 @@ export const eventsSlice = createSlice({
     addEvent: {
       reducer: (state, action: PayloadAction<TEvent>) => {
         state.events.push(action.payload);
+        state.selectedEvent = action.payload;
       },
       prepare: (eventUnic) => ({
         payload: { ...eventUnic, id: uuidv4() }

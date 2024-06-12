@@ -10,3 +10,20 @@ $dark: rgba(6, 41, 67, 1);
   padding-right: 20px;
   box-sizing: border-box;
 }
+
+@mixin button-ok {
+  background-image: url(../../images/ok.svg);
+  background-size: contain;
+}
+
+@mixin button-plus {
+  background-image: url(../../images/plus.svg);
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 100px;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+  background-size: contain;
+}

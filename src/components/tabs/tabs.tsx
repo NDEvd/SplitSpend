@@ -9,7 +9,7 @@ export type TabsProps = {
 
 export const Tabs: FC<TabsProps> = ({ isActiveTab, handlClickTab }) => {
 
-  // const [isActiveTab, setIsActiveTab] = useState<string>('tab-home');
+  // const [isActiveTab, setIsActiveTab] = useState<string>('/home');
   // const handlClickTab = (tabId: string) => {
   //   setIsActiveTab(tabId);
   //   console.log(tabId);
@@ -20,24 +20,24 @@ export const Tabs: FC<TabsProps> = ({ isActiveTab, handlClickTab }) => {
     <div data-tab className={styles.tabs}>
       {/* <a href='#/main?tab=home' */}
       <a href='#/'
-        data-trigger-tab='tab-home'
-        className={`${styles.tab} ${isActiveTab === 'tab-home' ? styles.tabHomeActive : styles.tabHome}`}
-        onClick={() => handlClickTab('tab-home')}>
+        data-trigger-tab='/home'
+        className={`${styles.tab} ${isActiveTab === '/home' ? styles.tabHomeActive : styles.tabHome}`}
+        onClick={() => handlClickTab('/home')}>
       </a>
       <a href='#/friends'
-        data-trigger-tab='tab-friends'
-        className={`${styles.tab} ${isActiveTab === 'tab-friends' ? styles.tabFriendsActive : styles.tabFriends}`}
-        onClick={() => handlClickTab('tab-friends')}>
+        data-trigger-tab='/friends'
+        className={`${styles.tab} ${isActiveTab === '/friends' ? styles.tabFriendsActive : styles.tabFriends}`}
+        onClick={() => handlClickTab('/friends')}>
       </a>
       <a href='#/expenses'
-        data-trigger-tab='tab-expenses'
-        className={`${styles.tab} ${isActiveTab === 'tab-expenses' ? styles.tabExpensesActive : styles.tabExpenses}`}
-        onClick={() => handlClickTab('tab-expenses')}>
+        data-trigger-tab='/expenses'
+        className={`${styles.tab} ${isActiveTab === '/expenses' ? styles.tabExpensesActive : styles.tabExpenses}`}
+        onClick={() => handlClickTab('/expenses')}>
       </a>
       <a href='#/results'
-        data-trigger-tab='tab-results'
-        className={`${styles.tab} ${isActiveTab === 'tab-results' ? styles.tabResultsActive : styles.tabResults}`}
-        onClick={() => handlClickTab('tab-results')}>
+        data-trigger-tab='/results'
+        className={`${styles.tab} ${isActiveTab === '/results' ? styles.tabResultsActive : styles.tabResults}`}
+        onClick={() => handlClickTab('/results')}>
       </a>
     </div>
 

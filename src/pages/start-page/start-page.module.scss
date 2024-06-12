@@ -1,15 +1,18 @@
+@import '../../styles/styles.scss';
+
 .button {
-  background-image: url(../../images/plus.svg);
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  bottom: 100px;
-  width: 80px;
-  height: 80px;
-  border: none;
-  z-index: 1;
-  background-color: transparent;
-  background-size: contain;
+  @include button-plus;
+  // background-image: url(../../images/plus.svg);
+  // position: fixed;
+  // left: 50%;
+  // transform: translate(-50%, 50%);
+  // bottom: 100px;
+  // width: 80px;
+  // height: 80px;
+  // border: none;
+  // z-index: 1;
+  // background-color: transparent;
+  // background-size: contain;
 }
 
 .ul {
