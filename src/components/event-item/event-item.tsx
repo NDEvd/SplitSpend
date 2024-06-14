@@ -6,8 +6,8 @@ export type EventItemProps = {
   title: string;
   dateFrom: string;
   dateTo?: string;
-  // onClick: MouseEventHandler<HTMLElement>;
-  onClick: () => void;
+  onClick: MouseEventHandler<HTMLElement>;
+  // onClick: (id: string) => void;
 }
 
 export const EventItem: FC<EventItemProps> = ({ 

@@ -7,11 +7,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.6s;
+  // box-shadow: 0px 5px 10px 0px rgba(30,89,69, 0.2);
+  transition: box-shadow 0.6s;
 }
 
 .item:hover {
-  background-color: rgba(143, 211, 244, 0.5);
+  box-shadow: 0px 5px 10px 0px rgba(30,89,69, 0.7);
+  cursor: pointer;
 }
 
 .title {
@@ -23,6 +25,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: $dark;
 }
 
 .dateItem {
@@ -30,6 +33,7 @@
   flex-direction: row;
   gap: 3px;
   align-items: center;
+  color: $dark;
 }
 
 .date {
@@ -37,4 +41,5 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 19.36px;
+  color: $dark;
 }

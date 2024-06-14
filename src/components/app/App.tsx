@@ -1,6 +1,5 @@
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { useState } from 'react';
 
 import { AddEventPage } from '../../pages/add-event/add-event';
 import { AddExpensePage } from '../../pages/addExpense/addExpense';
@@ -15,14 +14,6 @@ import { Header } from '../header/header';
 function App() {
   const location = useLocation();
 
-  const [isActiveTab, setIsActiveTab] = useState<string>(location.pathname);
-  const handlClickTab = (tabId: string) => {
-    setIsActiveTab(tabId);
-    console.log(location.pathname);
-  }
-
-  
-
   return (
     <>
       <Header homePage={(location.pathname === '/' || location.pathname === '/addEvent') ? true : false} />
@@ -33,13 +24,12 @@ function App() {
         <Route path='/expenses' element={<ExpensesPage />} />
         <Route path='/addExpense' element={<AddExpensePage />} />
         <Route path='/results' element={<ResultsPage />} />
+        
       </Routes>
       <Footer
         notEmpty={(location.pathname === '/' || location.pathname === '/addEvent') ? false : true}
-        isActiveTab={isActiveTab}
-        handlClickTab={handlClickTab} />
+      />
     </>
-
   )
 }
 
