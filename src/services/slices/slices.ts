@@ -37,6 +37,7 @@ export const eventsSlice = createSlice({
         payload: { ...eventUnic, id: uuidv4() }
       })
     },
+    
     addFriend: {
       reducer: (state, action: PayloadAction<TFriend>) => {
         state.friends.push(action.payload);
@@ -46,6 +47,7 @@ export const eventsSlice = createSlice({
         payload: { ...friendUnic, id: uuidv4() }
       })
     },
+
     deleteFriend: (state, action: PayloadAction<string>) => {
       state.friends = state.friends.filter((item) => item.id !== action.payload);
     },
@@ -56,13 +58,7 @@ export const eventsSlice = createSlice({
         friend.name = action.payload.newName;
       }
     },
-    // updateFriendName: (state, action: PayloadAction<TNameFriend>) => {
-    //   const { id, name } = action.payload;
-    //   const item = state.friends.find(item => item.id === id);
-    //   if (item) {
-    //     item.name = name;
-    //   }
-    // },
+
     changeSelectedEvent: (state, action: PayloadAction<string>) => {
       state.selectedEvent = state.events.filter(item => item.id === action.payload)[0];
     },

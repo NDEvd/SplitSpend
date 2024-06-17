@@ -15,21 +15,25 @@ function App() {
   const location = useLocation();
 
   return (
-    <>
+    <div className='wrapper'>
       <Header homePage={(location.pathname === '/' || location.pathname === '/addEvent') ? true : false} />
-      <Routes>
-        <Route path='/' element={<StartPage />} />
-        <Route path='/addEvent' element={<AddEventPage />} />
-        <Route path='/friends' element={<FriendsPage />} />
-        <Route path='/expenses' element={<ExpensesPage />} />
-        <Route path='/addExpense' element={<AddExpensePage />} />
-        <Route path='/results' element={<ResultsPage />} />
-        
-      </Routes>
+
+      <div className='content'>
+        <Routes>
+          <Route path='/' element={<StartPage />} />
+          <Route path='/addEvent' element={<AddEventPage />} />
+          <Route path='/friends' element={<FriendsPage />} />
+          <Route path='/expenses' element={<ExpensesPage />} />
+          <Route path='/addExpense' element={<AddExpensePage />} />
+          <Route path='/results' element={<ResultsPage />} />
+          
+        </Routes>
+      </div>
+
       <Footer
         notEmpty={(location.pathname === '/' || location.pathname === '/addEvent') ? false : true}
       />
-    </>
+    </div>
   )
 }
 
