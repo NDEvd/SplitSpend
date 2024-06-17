@@ -1,8 +1,10 @@
 $gradient-color: linear-gradient(90deg, #71D898 0%, #7AB4D0 100%);
 $dark: rgba(6, 41, 67, 1);
 
+
 @mixin basic-item {
-  border: 1px solid $dark;
+  border: 0.5px solid $dark;
+  // outline: 0.5px solid $dark;
   border-radius: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -26,4 +28,14 @@ $dark: rgba(6, 41, 67, 1);
   height: 80px;
   z-index: 1;
   background-size: contain;
+}
+
+@mixin input-without-border {
+  font-family: Inter;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: $dark;
+  border: none;
 }

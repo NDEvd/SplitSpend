@@ -4,16 +4,14 @@ import { Tabs } from '../tabs/tabs';
 
 export type FooterProps = {
   notEmpty: boolean;
-  isActiveTab?: string;
-  handlClickTab?: (tabId: string) => void | undefined;
 }
 
-export const Footer: FC<FooterProps> = ({ notEmpty, isActiveTab, handlClickTab }) => {
+export const Footer: FC<FooterProps> = ({ notEmpty }) => {
 
   return (
     <div className={style.footer}>
       {notEmpty && <div>
-        <Tabs isActiveTab={isActiveTab} handlClickTab={handlClickTab}/>
+        <Tabs />
       </div>}
     </div>
   );

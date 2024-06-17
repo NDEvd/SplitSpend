@@ -1,0 +1,54 @@
+@import '../../styles/styles.scss';
+
+.item {
+  @include basic-item;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 10px;
+  min-height: 60px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.6s;
+}
+
+.name {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: $dark;
+  align-self: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.change {
+  background-image: url(../../images/pensil.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.save {
+  @include button-ok;
+  width: 30px;
+  height: 30px;
+}
+
+.delete {
+  background-image: url(../../images/delete.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.inputFriend {
+  @include input-without-border;
+}
