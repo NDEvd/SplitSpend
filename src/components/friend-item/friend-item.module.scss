@@ -11,7 +11,6 @@
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.6s;
-  // position: relative;
 }
 
 .name {
@@ -39,7 +38,7 @@
 }
 
 .save {
-  background-image: url(../../images/ok.svg);
+  @include button-ok;
   width: 30px;
   height: 30px;
 }
@@ -48,4 +47,8 @@
   background-image: url(../../images/delete.svg);
   width: 30px;
   height: 30px;
+}
+
+.inputFriend {
+  @include input-without-border;
 }

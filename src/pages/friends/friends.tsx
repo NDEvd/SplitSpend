@@ -6,7 +6,7 @@ import { useSelector } from '../../services/store';
 import { InputField } from '../../ui/input/input';
 import { TFriend } from '../../utils/types';
 import { useDispatch } from '../../services/store';
-import { addFriend, deleteFriend } from '../../services/slices/slices';
+import { addFriend, deleteFriend, updateFriendName } from '../../services/slices/slices';
 
 export const FriendsPage: FC = () => {
   const idSelectedEvent = useSelector(state => state.services.selectedEvent.id);
@@ -35,8 +35,7 @@ export const FriendsPage: FC = () => {
           <FriendItem
             key={data.id}
             name={data.name}
-            // реализовать добавление инпута
-            handleChange={() => console.log('добавить инпут')}
+            handleChange={(newName) => dispatch(updateFriendName({ id: data.id, newName }))}
             handleDelete={() => dispatch(deleteFriend(data.id))}
           />
           ))}

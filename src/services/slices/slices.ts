@@ -49,13 +49,20 @@ export const eventsSlice = createSlice({
     deleteFriend: (state, action: PayloadAction<string>) => {
       state.friends = state.friends.filter((item) => item.id !== action.payload);
     },
-    updateFriendName: (state, action: PayloadAction<TFriend>) => {
-      const { id, name } = action.payload;
-      const item = state.friends.find(item => item.id === id);
-      if (item) {
-        item.name = name;
+
+    updateFriendName: (state, action: PayloadAction<{ id: string, newName: string }>) => {
+      const friend = state.friends.find(friend => friend.id === action.payload.id);
+      if (friend) {
+        friend.name = action.payload.newName;
       }
     },
+    // updateFriendName: (state, action: PayloadAction<TNameFriend>) => {
+    //   const { id, name } = action.payload;
+    //   const item = state.friends.find(item => item.id === id);
+    //   if (item) {
+    //     item.name = name;
+    //   }
+    // },
     changeSelectedEvent: (state, action: PayloadAction<string>) => {
       state.selectedEvent = state.events.filter(item => item.id === action.payload)[0];
     },
@@ -67,4 +74,4 @@ export const eventsSlice = createSlice({
 });
 
 export default eventsSlice.reducer;
-export const { addEvent, addFriend, deleteFriend, changeSelectedEvent } = eventsSlice.actions;
+export const { addEvent, addFriend, deleteFriend, updateFriendName, changeSelectedEvent } = eventsSlice.actions;

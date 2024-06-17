@@ -26,13 +26,14 @@
 }
 
 .inputFriend {
-  font-family: Inter;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  color: $dark;
-  border: none;
+  @include input-without-border;
+  // font-family: Inter;
+  // width: 100%;
+  // font-size: 16px;
+  // font-weight: 400;
+  // line-height: 1;
+  // color: $dark;
+  // border: none;
 }
 
 .span {

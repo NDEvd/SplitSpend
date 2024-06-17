@@ -1,11 +1,11 @@
-import { FC, useState, MouseEventHandler } from 'react';
+import { FC, useState } from 'react';
 import styles from './friend-item.module.scss';
 
 export type EventItemProps = {
   name: string;
   // handleChange: MouseEventHandler;
   handleChange: (newName: string) => void;
-  handleDelete: MouseEventHandler;
+  handleDelete: () => void;
 }
 
 export const FriendItem: FC<EventItemProps> = ({ name, handleChange, handleDelete }) => {
@@ -24,23 +24,21 @@ export const FriendItem: FC<EventItemProps> = ({ name, handleChange, handleDelet
   return (
     <div className={styles.item} >
       {isEditing ? (
-        <input
-          className={styles.input}
+        <input 
+          className={styles.inputFriend}
           type="text"
           value={newName}
           onChange={onChange}
         />
       ) : (
-        <h2 className={styles.name}>{name}</h2>
+        <span className={styles.name}>{name}</span>
       )}
-      <h2 className={styles.name}>{name}</h2>
       <div className={styles.buttons}>
-      {isEditing ? (
+        {isEditing ? (
           <button className={styles.save} onClick={onSave}></button>
         ) : (
           <button className={styles.change} onClick={() => setIsEditing(true)}></button>
         )}
-        {/* <button className={styles.change} onClick={handleChange}></button> */}
         <button className={styles.delete} onClick={handleDelete}></button>
       </div>
     </div>
