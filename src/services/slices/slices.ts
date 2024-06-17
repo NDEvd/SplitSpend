@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import type {PayloadAction} from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 import { TEvent, TFriend, TExpense } from '../../utils/types';
 import { mockEventOnly, mockFriendsOnly, mockExpensesOnly } from '../../utils/const';
 import { v4 as uuidv4 } from 'uuid';
