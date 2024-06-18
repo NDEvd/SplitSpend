@@ -1,0 +1,15 @@
+@import '../../styles/styles.scss';
+
+.button {
+  @include button-plus;
+}
+
+.ul {
+  @include basic-ul;
+}
+
+@media screen and (max-width: 620px) {
+  .ul {
+    padding: 15px;
+  } 
+}

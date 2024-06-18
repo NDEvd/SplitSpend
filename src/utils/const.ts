@@ -99,8 +99,29 @@ export const mockExpensesOnly: TExpense[] = [
   },
   {
     id: '211',
-    idEvent: '2',
+    idEvent: '1',
     title: 'Ужин',
+    sum: 4000,
+    date: '06.07.24',
+    idWhoPaid: '21',
+    equally: false,
+    datails: [
+      {
+        idFriend: '11',
+        participated: true,
+        sum: 4000,
+      },
+      {
+        idFriend: '12',
+        participated: false,
+        sum: 0,
+      },
+    ],
+  },
+  {
+    id: '211',
+    idEvent: '2',
+    title: 'Рест',
     sum: 10000,
     date: '06.07.24',
     idWhoPaid: '21',
