@@ -15,4 +15,14 @@
 .content {
   grid-row: 2;
   overflow-y: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 620px) {
+  .content {
+    padding: 15px;
+  } 
 }

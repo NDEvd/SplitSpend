@@ -4,6 +4,7 @@ import { ExpenseItem } from '../../components/expense-item/expense-item';
 import { useSelector,
   //  useDispatch 
   } from '../../services/store';
+import { Search } from '../../components/search/search';
 
 
 export const ExpensesPage: FC = () => {
@@ -21,6 +22,7 @@ export const ExpensesPage: FC = () => {
 
   return (
     <>
+      <Search />
       {arrayExpenses &&
         <ul className={styles.ul}>
           {arrayExpenses.map(( data ) => (

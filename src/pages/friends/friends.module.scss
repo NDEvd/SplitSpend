@@ -8,11 +8,11 @@
   @include basic-ul;
 }
 
-@media screen and (max-width: 620px) {
-  .ul {
-    padding: 15px;
-  } 
-}
+// @media screen and (max-width: 620px) {
+//   .ul {
+//     padding: 15px;
+//   } 
+// }
 
 .form {
   @include basic-item;
@@ -25,17 +25,18 @@
   gap: 30px;
   justify-content: space-between;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  // margin-left: 40px;
+  // margin-right: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 620px) {
-  .form {
-    margin-left: 15px;
-    margin-right: 15px;
-  } 
-}
+// @media screen and (max-width: 620px) {
+//   .form {
+//     margin-left: 15px;
+//     margin-right: 15px;
+//   } 
+// }
 
 .buttons {
   display: flex;
