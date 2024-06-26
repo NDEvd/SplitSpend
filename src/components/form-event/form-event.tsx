@@ -27,22 +27,23 @@ export const FormEvent: FC = () => {
     <FormProvider {...methods}>
       <form action='' onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <InputField
+          isNewFriend={false}
           name='title'
           label='Название'
           placeholder='Введите название'
           type='text'
           validation={{ required: 'Название обязательное поле' }}
         />
+
         <label htmlFor='' className={styles.label}>
           Даты
         </label>
         <div className={styles.dates}>
-         
           <InputField
+            isNewFriend={false}
             name='dateFrom'
             label=''
             placeholder='Введите дату начала'
-            
             type='text'
             validation={{ required: 'Дата обязательное поле',
               pattern: {
@@ -52,6 +53,7 @@ export const FormEvent: FC = () => {
             }}
           />
           <InputField
+            isNewFriend={false}
             name='dateTo'
             label=''
             placeholder='Введите дату окончания'

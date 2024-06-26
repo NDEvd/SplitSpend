@@ -18,14 +18,6 @@ export const ExpenseItem: FC<ExpenseItemProps> = ({
   onClick,
 }) => (
     <div className={styles.item} onClick={onClick}>
-      {/* <div className={styles.subItem}>
-        <span className={`${styles.title} ${styles.span}`}>{title}</span>
-        <span className={styles.span}>({name})</span>
-      </div>
-      <div className={styles.subItem}>
-        <span className={styles.span}>{date}</span>
-        <span className={styles.span}>{sum}</span>
-      </div> */}
       
       <span className={`${styles.title} ${styles.span}`}>{title}</span>
       <span className={styles.span}>({name})</span>

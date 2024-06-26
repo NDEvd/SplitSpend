@@ -1,14 +1,13 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import styles from './search.module.scss';
-// import { useSelector } from '../../services/store';
 import loupe from '../../images/loupe.svg';
 
-// export type HeaderProps = {
-//   homePage: boolean;
-// }
+export type SearchProps = {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-export const Search: FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+export const Search: FC<SearchProps> = ({ value, onChange }) => {
  
   return (
     <div className={styles.item}>
@@ -16,12 +15,11 @@ export const Search: FC = () => {
       <input
         className={styles.input}
         type="text"
-        value={searchTerm}
+        value={value}
         autoFocus
         autoComplete='off'
-        onChange={(e) => {setSearchTerm(e.target.value)}}
+        onChange={onChange}
       />
-
     </div>
   );
 };

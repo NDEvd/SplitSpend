@@ -3,7 +3,6 @@ import styles from './friend-item.module.scss';
 
 export type EventItemProps = {
   name: string;
-  // handleChange: MouseEventHandler;
   handleChange: (newName: string) => void;
   handleDelete: () => void;
 }

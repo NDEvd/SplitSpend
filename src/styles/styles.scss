@@ -5,12 +5,10 @@ $dark: rgba(6, 41, 67, 1);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  // padding: 40px;
 }
 
 @mixin basic-item {
   border: 0.5px solid $dark;
-  // outline: 0.5px solid $dark;
   border-radius: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
