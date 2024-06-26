@@ -5,15 +5,5 @@
 }
 
 .ul {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-right: 0;
-  padding: 40px;
-}
-
-@media screen and (max-width: 620px) {
-  .ul {
-    padding: 15px;
-  } 
+  @include basic-ul;
 }

@@ -1,0 +1,13 @@
+@import '../../styles/styles.scss';
+
+.item {
+  @include basic-item;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  @include input-without-border;
+  border-bottom: 1px solid $dark;
+}

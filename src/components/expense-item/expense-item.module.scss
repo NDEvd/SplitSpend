@@ -1,0 +1,60 @@
+@import '../../styles/styles.scss';
+
+.item {
+  @include basic-item;
+  min-height: 60px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.6s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.item:hover {
+  box-shadow: 0px 5px 10px 0px rgba(30,89,69, 0.3);
+}
+
+.subItem {
+  width: 46%;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.span {
+  width: 24%;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: $dark;
+}
+
+.title {
+  color: transparent;
+  background-clip: text;
+  background-image: $gradient-color;
+}
+
+.dateItem {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  color: $dark;
+}
+
+.date {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  color: $dark;
+}

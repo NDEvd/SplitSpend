@@ -1,10 +1,14 @@
 $gradient-color: linear-gradient(90deg, #71D898 0%, #7AB4D0 100%);
 $dark: rgba(6, 41, 67, 1);
 
+@mixin basic-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 @mixin basic-item {
   border: 0.5px solid $dark;
-  // outline: 0.5px solid $dark;
   border-radius: 30px;
   padding-top: 20px;
   padding-bottom: 20px;

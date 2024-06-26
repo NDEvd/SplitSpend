@@ -2,10 +2,9 @@ import { FC, useState } from 'react';
 import styles from './friends.module.scss';
 import { SubmitHandler, useForm, FormProvider } from 'react-hook-form';
 import { FriendItem } from '../../components/friend-item/friend-item';
-import { useSelector } from '../../services/store';
+import { useSelector, useDispatch } from '../../services/store';
 import { InputField } from '../../ui/input/input';
 import { TFriend } from '../../utils/types';
-import { useDispatch } from '../../services/store';
 import { addFriend, deleteFriend, updateFriendName } from '../../services/slices/slices';
 
 export const FriendsPage: FC = () => {
